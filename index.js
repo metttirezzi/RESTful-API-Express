@@ -9,6 +9,11 @@ app.get('/api/courses' , (req , res) => {
     res.send([1,2,3]);
 });
 
+//api/courses/1 adding number to end of endpoint
+app.get('/api/courses/:id' , (req , res) => {
+    res.send(req.params.id);
+});
+
 //Environment Variable 
 //PORT
 const port = process.env.PORT || 3000;
